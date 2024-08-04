@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.service import Service
+from webdriver_manager.firefox import GeckoDriverManager 
 
 import ast
 import os
@@ -66,7 +67,8 @@ url = data_list[0]["url"]
 '''
 
 driver_path = None # 
-service = Service(executable_path=driver_path) #Service searches for executable in PATH, since driver_path=none
+#service = Service(executable_path=driver_path) #Service searches for executable in PATH, since driver_path=none
+service = Service(GeckoDriverManager().install())
 driver = webdriver.Firefox(service=service)
 #driver.get("http://127.0.0.1:8000/") # test locally, run uvicorn tu2txt:app in virtual environment
 driver.get("http://tuple-2-txt.site/")
