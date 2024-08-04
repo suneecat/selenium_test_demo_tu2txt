@@ -12,3 +12,5 @@ Text is extracted from the tuple:
 
 The results of each text extraction algorithm are shown in turn for about 10 seconds before proceeding to the next algorithm.    
 Hit "enter" on the keyboard to end the test.    
+
+08/03/2024  Updated code to use webdriver-manager, which finds the needed geckodriver.    
